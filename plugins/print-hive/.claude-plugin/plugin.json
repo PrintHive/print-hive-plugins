@@ -1,13 +1,13 @@
 {
   "name": "print-hive",
   "displayName": "Print Hive",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Manage 3D-printer fleets, jobs, models, filament, inventory, and Makes through Print Hive.",
   "author": {
     "name": "Print Hive",
     "url": "https://printhiv3d.com"
   },
   "homepage": "https://printhiv3d.com/mcp",
-  "repository": "https://github.com/ascension/print-hive-plugins",
+  "repository": "https://github.com/PrintHive/print-hive-plugins",
   "keywords": ["3d-printing", "print-farm", "fleet-management", "mcp"]
 }

@@ -10,7 +10,7 @@
 - **Privacy:** https://printhiv3d.com/privacy
 - **Terms:** https://printhiv3d.com/terms
 - **MCP server:** https://api.printhiv3d.com/v1/mcp
-- **Public repository:** https://github.com/ascension/print-hive-plugins
+- **Public repository:** https://github.com/PrintHive/print-hive-plugins
 
 ## Descriptions
 

@@ -7,7 +7,7 @@ Official Print Hive plugins for Claude Code and Codex. Connect an agent to your 
 ## Claude Code
 
 ```sh
-claude plugin marketplace add ascension/print-hive-plugins
+claude plugin marketplace add PrintHive/print-hive-plugins
 claude plugin install print-hive@print-hive --scope user
 ```
 
@@ -16,7 +16,7 @@ Start Claude Code, open `/mcp`, and complete Print Hive authorization.
 ## Codex
 
 ```sh
-codex plugin marketplace add ascension/print-hive-plugins
+codex plugin marketplace add PrintHive/print-hive-plugins
 codex plugin add print-hive@print-hive
 ```
 

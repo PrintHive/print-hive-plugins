@@ -5,7 +5,7 @@ One plugin package supports Claude Code and Codex. Both clients connect to the s
 ## Claude Code
 
 ```sh
-claude plugin marketplace add ascension/print-hive-plugins
+claude plugin marketplace add PrintHive/print-hive-plugins
 claude plugin install print-hive@print-hive --scope user
 ```
 
@@ -16,7 +16,7 @@ Start an interactive Claude Code session, open `/mcp`, and complete Print Hive a
 Add the repository marketplace, then install the plugin:
 
 ```sh
-codex plugin marketplace add ascension/print-hive-plugins
+codex plugin marketplace add PrintHive/print-hive-plugins
 codex plugin add print-hive@print-hive
 ```
 

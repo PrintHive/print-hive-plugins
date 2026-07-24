@@ -26,7 +26,7 @@
 ## Anthropic
 
 - [ ] Validate the public marketplace and plugin with Claude Code strict validation.
-- [ ] Publish the distributable bundle to `ascension/print-hive-plugins`.
+- [x] Publish the distributable bundle to `PrintHive/print-hive-plugins`.
 - [ ] Install from the public Git marketplace in a clean Claude Code profile and complete OAuth.
 - [ ] Submit the plugin through the Claude.ai or Anthropic Console plugin form.
 - [ ] Supply the stacked Print Hive logo, listing copy, public repository, support and legal URLs, MCP URL, OAuth details, and reviewer access requested by the form.
