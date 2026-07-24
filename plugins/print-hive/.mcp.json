@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "print-hive": {
+      "type": "http",
+      "url": "https://api.printhiv3d.com/v1/mcp"
+    }
+  }
+}

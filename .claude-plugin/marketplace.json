@@ -1,0 +1,15 @@
+{
+  "name": "print-hive",
+  "description": "Official Print Hive agent plugins for 3D-printer fleet operations.",
+  "owner": {
+    "name": "Print Hive"
+  },
+  "plugins": [
+    {
+      "name": "print-hive",
+      "source": "./plugins/print-hive",
+      "description": "Manage a Print Hive 3D-printer fleet from Claude Code.",
+      "version": "0.1.0"
+    }
+  ]
+}

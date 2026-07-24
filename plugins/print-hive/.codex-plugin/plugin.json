@@ -1,0 +1,42 @@
+{
+  "name": "print-hive",
+  "version": "0.1.0",
+  "description": "Manage 3D-printer fleets, jobs, models, filament, inventory, and Makes through Print Hive.",
+  "author": {
+    "name": "Print Hive",
+    "url": "https://printhiv3d.com"
+  },
+  "homepage": "https://printhiv3d.com/mcp",
+  "repository": "https://github.com/ascension/print-hive-plugins",
+  "keywords": [
+    "3d-printing",
+    "print-farm",
+    "fleet-management",
+    "printers",
+    "filament",
+    "inventory",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Print Hive",
+    "shortDescription": "Run your 3D-print farm with agents",
+    "longDescription": "Connect Codex and ChatGPT to Print Hive for organization-scoped fleet visibility, model and material management, inventory operations, Makes, print-job dispatch, and guarded printer control.",
+    "developerName": "Print Hive",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://printhiv3d.com",
+    "privacyPolicyURL": "https://printhiv3d.com/privacy",
+    "termsOfServiceURL": "https://printhiv3d.com/terms",
+    "defaultPrompt": [
+      "Show me the health of my print farm",
+      "Find a model file and queue a confirmed print",
+      "Review filament inventory and open risks"
+    ],
+    "composerIcon": "./assets/printhive-logo-stacked@2x.png",
+    "logo": "./assets/printhive-logo-stacked@4x.png",
+    "logoDark": "./assets/printhive-logo-stacked@4x.png",
+    "brandColor": "#1DB800"
+  }
+}
