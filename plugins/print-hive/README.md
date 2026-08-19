@@ -27,7 +27,7 @@ For headless Grok Bot agents without built-in OAuth, use the agent claim flow do
       "type": "http",
       "url": "https://api.printhiv3d.com/v1/mcp",
       "headers": {
-        "Authorization": "Bearer <your-api-key>"
+        "x-api-key": "<your-api-key>"
       }
     }
   }
