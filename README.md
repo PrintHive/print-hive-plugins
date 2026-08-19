@@ -2,7 +2,24 @@
 
 ![Print Hive](plugins/print-hive/assets/printhive-logo-stacked@2x.png)
 
-Official Print Hive plugins for Claude Code and Codex. Connect an agent to your organization-scoped Print Hive fleet, models, files, materials, inventory, Makes, print jobs, and guarded printer controls through OAuth.
+Official Print Hive plugins for Claude Code, Codex, Cursor, and Grok Bot. Connect an agent to your organization-scoped Print Hive fleet, models, files, materials, inventory, Makes, print jobs, and guarded printer controls through OAuth.
+
+## Cursor / Grok Bot
+
+Install from the Cursor Marketplace (after publish):
+
+1. Open Cursor Settings → Plugins → Marketplace
+2. Search for "Print Hive"
+3. Click Install, then complete Print Hive OAuth authorization
+
+Until the marketplace listing is published, install locally:
+
+```sh
+# Clone to local plugins directory
+git clone https://github.com/PrintHive/print-hive-plugins ~/.cursor/plugins/local/print-hive-plugins
+```
+
+Or import the repository marketplace in team settings.
 
 ## Claude Code
 

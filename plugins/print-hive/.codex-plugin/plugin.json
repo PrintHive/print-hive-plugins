@@ -1,6 +1,6 @@
 {
   "name": "print-hive",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Manage 3D-printer fleets, jobs, models, filament, inventory, and Makes through Print Hive.",
   "author": {
     "name": "Print Hive",

@@ -31,3 +31,19 @@
 - [ ] Complete OAuth against a reviewer account.
 - [ ] Submit the plugin through the Claude.ai or Anthropic Console plugin form.
 - [ ] Supply the stacked Print Hive logo, listing copy, public repository, support and legal URLs, MCP URL, OAuth details, and reviewer access requested by the form.
+
+## Cursor / Grok Bot
+
+- [x] Create `.cursor-plugin/marketplace.json` at repo root.
+- [x] Create `plugins/print-hive/.cursor-plugin/plugin.json`.
+- [x] Create `plugins/print-hive/mcp.json` for Cursor MCP discovery.
+- [x] Create `plugins/print-hive/rules/print-hive-farm.mdc` with farm safety rules.
+- [x] Create `plugins/print-hive/skills/grok-claim/SKILL.md` for headless agent auth.
+- [x] Create `plugins/print-hive/server.json` for MCP registry listing.
+- [x] Update READMEs to include Cursor as a first-class client.
+- [x] Create `plugins/print-hive/submission/cursor-listing.md` with marketplace copy.
+- [ ] Test local installation in Cursor.
+- [ ] Complete OAuth against a reviewer account.
+- [ ] Submit to https://cursor.com/marketplace/publish.
+- [ ] After domain verification, publish `server.json` to the official MCP registry as `com.printhiv3d/print-hive`.
+- [ ] Update https://www.printhiv3d.com/docs/mcp/cursor to lead with marketplace install.
