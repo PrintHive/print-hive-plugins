@@ -1,6 +1,40 @@
 # Print Hive agent plugin
 
-One plugin package supports Claude Code and Codex. Both clients connect to the same remote, organization-scoped Print Hive MCP server over OAuth.
+One plugin package supports Claude Code, Codex, Cursor, and Grok Bot. All clients connect to the same remote, organization-scoped Print Hive MCP server over OAuth.
+
+## Cursor / Grok Bot
+
+Install from the Cursor Marketplace (after publish):
+
+1. Open Cursor Settings → Plugins → Marketplace
+2. Search for "Print Hive"
+3. Click Install, then complete Print Hive OAuth authorization
+
+Until the marketplace listing is published, install locally for testing:
+
+```sh
+git clone https://github.com/PrintHive/print-hive-plugins ~/.cursor/plugins/local/print-hive-plugins
+```
+
+For headless Grok Bot agents without built-in OAuth, use the agent claim flow documented in `skills/grok-claim/SKILL.md`.
+
+**Private/headless fallback:** If OAuth is unavailable, you can configure a static API key in `~/.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "print-hive": {
+      "type": "http",
+      "url": "https://api.printhiv3d.com/v1/mcp",
+      "headers": {
+        "Authorization": "Bearer <your-api-key>"
+      }
+    }
+  }
+}
+```
+
+This method is not recommended for interactive use. Prefer OAuth for better security and scope control.
 
 ## Claude Code
 
@@ -45,6 +79,10 @@ Read the [privacy policy](https://printhiv3d.com/privacy), [terms of service](ht
 ## Validation
 
 ```sh
+# Claude Code
 claude plugin validate ./plugins/print-hive --strict
 python3 /path/to/plugin-creator/scripts/validate_plugin.py ./plugins/print-hive
+
+# Cursor (when cursor CLI validation is available)
+cursor plugin validate ./plugins/print-hive
 ```
