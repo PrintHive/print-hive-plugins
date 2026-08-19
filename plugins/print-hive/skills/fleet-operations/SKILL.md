@@ -5,6 +5,8 @@ description: Inspect and operate a Print Hive fleet, queue and start jobs, manag
 
 # Operate a Print Hive fleet
 
+> **Specialized skills:** For what-next priorities, material runway, production promises, failure patterns, dispatch queues, or filament operations, use the dedicated skills (shift-and-dispatch, material-runway, production-commitments, reliability-diagnostics, operator-context, filament-operations, etc.) rather than inventing a ranking or stitching data manually.
+
 Use Print Hive MCP as the source of truth. Never infer connectivity from print activity: `offline`/`is_connected` is connectivity, while `status` is print activity.
 
 ## Trust boundary
