@@ -49,6 +49,15 @@ https://api.printhiv3d.com/v1/mcp
 
 Until the directory listing is approved, add it as a custom MCP connector using OAuth discovery.
 
+## Skills
+
+The plugin includes specialized operator workflow skills:
+
+- **Core:** setup, fleet-operations, library-inventory, grok-claim
+- **Operator workflows:** fleet-status, shift-and-dispatch, material-runway, production-commitments, smart-assign, risk-readiness, performance-reporting, reliability-diagnostics, operator-context, filament-operations, briefing-settings
+
+See `plugins/print-hive/skills/` for detailed routing and tool usage.
+
 ## Safety
 
 - Every request is bound to the authenticated Print Hive organization.

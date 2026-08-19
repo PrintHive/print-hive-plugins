@@ -76,6 +76,28 @@ Use OAuth discovery. Do not configure a shared static API key for a public conne
 
 Read the [privacy policy](https://printhiv3d.com/privacy), [terms of service](https://printhiv3d.com/terms), or [contact support](https://printhiv3d.com/support).
 
+## Skills
+
+The plugin includes operator workflow skills for farm management:
+
+| Skill | Purpose |
+|-------|---------|
+| `setup` | Account creation and OAuth connection |
+| `fleet-operations` | Job dispatch, printer control, safety confirmations |
+| `library-inventory` | Models, materials, inventory, Makes |
+| `grok-claim` | Headless agent authentication |
+| `fleet-status` | Read-only connectivity and hardware inventory |
+| `shift-and-dispatch` | Session recaps, what-next priorities, dispatch queues |
+| `material-runway` | Filament depletion and pre-shift reloads |
+| `production-commitments` | Promise assessment for deadlines and rush orders |
+| `smart-assign` | Best printer selection for jobs or files |
+| `risk-readiness` | Jobs at risk, queue health, maintenance |
+| `performance-reporting` | Utilization, throughput, downtime metrics |
+| `reliability-diagnostics` | Failure patterns and root-cause evidence |
+| `operator-context` | Receipts, annotations, reservations, shift handoff |
+| `filament-operations` | Physical load/unload and narrated assignments |
+| `briefing-settings` | Briefing schedules and alert thresholds |
+
 ## Validation
 
 ```sh

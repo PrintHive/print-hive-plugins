@@ -76,10 +76,15 @@ Official Print Hive connector for Cursor and Grok Bot. Use when the user wants t
 1. Install plugin from marketplace or local path.
 2. Complete OAuth authorization.
 3. Run "Show me the health of my print farm" — should use read tools only.
-4. Run "What should I do next?" — should invoke `farm_playbook`.
+4. Run "What should I do next?" — should invoke `farm_playbook` via shift-and-dispatch skill.
 5. Run "Queue a confirmed print" — should use `job_create` then await confirmation before `job_start`.
-6. Verify skills are discovered and available.
+6. Verify skills are discovered and available (15 total including operator workflow skills).
 7. Verify rules are applied (confirmations required for mutations).
+
+## Version 0.1.4 changes
+
+- Added 11 operator workflow skills from Hex/Eve: fleet-status, shift-and-dispatch, material-runway, production-commitments, smart-assign, risk-readiness, performance-reporting, reliability-diagnostics, operator-context, filament-operations, briefing-settings.
+- Skills route to correct MCP tools and avoid Hex-only tools not on public server.
 
 ## Post-publish actions
 

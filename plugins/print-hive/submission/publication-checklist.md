@@ -42,6 +42,7 @@
 - [x] Create `plugins/print-hive/server.json` for MCP registry listing.
 - [x] Update READMEs to include Cursor as a first-class client.
 - [x] Create `plugins/print-hive/submission/cursor-listing.md` with marketplace copy.
+- [x] Add 11 operator workflow skills (v0.1.4): fleet-status, shift-and-dispatch, material-runway, production-commitments, smart-assign, risk-readiness, performance-reporting, reliability-diagnostics, operator-context, filament-operations, briefing-settings.
 - [ ] Test local installation in Cursor.
 - [ ] Complete OAuth against a reviewer account.
 - [ ] Submit to https://cursor.com/marketplace/publish.
