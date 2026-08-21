@@ -46,5 +46,30 @@
 - [ ] Test local installation in Cursor.
 - [ ] Complete OAuth against a reviewer account.
 - [ ] Submit to https://cursor.com/marketplace/publish.
-- [ ] After domain verification, publish `server.json` to the official MCP registry as `com.printhiv3d/print-hive`.
 - [ ] Update https://www.printhiv3d.com/docs/mcp/cursor to lead with marketplace install.
+
+## Official MCP Registry
+
+The server.json at `plugins/print-hive/server.json` is prepared for the official registry at `registry.modelcontextprotocol.io` but is **not yet published**. Domain verification is required first.
+
+### Domain verification (required)
+
+Choose DNS or HTTP verification for `printhiv3d.com` to claim the `com.printhiv3d` namespace:
+
+**Option A: DNS verification**
+1. Generate an Ed25519 or ECDSA P-384 keypair.
+2. Add a DNS TXT record to `printhiv3d.com` in the format: `v=MCPv1; k=[algorithm]; p=[public_key]`
+3. Run: `mcp-publisher login dns --domain=printhiv3d.com --private-key=HEX_KEY`
+
+**Option B: HTTP verification**
+1. Generate an Ed25519 or ECDSA P-384 keypair.
+2. Host the public key at `https://printhiv3d.com/.well-known/mcp-registry-auth`
+3. Run: `mcp-publisher login http --domain=printhiv3d.com --private-key=HEX_KEY`
+
+### Publish to registry
+
+After successful domain verification:
+
+- [ ] Validate the server.json: `mcp-publisher validate plugins/print-hive/server.json`
+- [ ] Publish to registry: `mcp-publisher publish plugins/print-hive/server.json`
+- [ ] Confirm listing appears at `https://registry.modelcontextprotocol.io/servers/com.printhiv3d/print-hive`
