@@ -76,7 +76,7 @@ Official Print Hive connector for Cursor and Grok Bot. Use when the user wants t
 
 1. Install plugin from marketplace or copy `plugins/print-hive` to `~/.cursor/plugins/local/print-hive` (Cursor IDE only; Grok Bot cannot load local plugins).
 2. Complete OAuth authorization (or grok-claim if OAuth is unavailable). Do not paste tokens in chat.
-3. Run "Onboard my farm: authorize, install Hive Link, and add my printers" — setup skill; Hive Link then printer_requirements → printer_add → printer_connect when those tools exist, else `platform_links`. Must not call `job_start` / `print_resume`.
+3. Run "Onboard my farm: authorize, install Hive Link, and add my printers" — setup skill; `printer_requirements` when present (`brand` + `model` catalog); add/connect and Hive Link still `platform_links`. Must not start/stop/pause/G-code.
 4. Run "Show me the health of my print farm" — should use read tools only.
 5. Run "What should I do next?" — should invoke `farm_playbook` via shift-and-dispatch skill.
 6. Run "Queue a confirmed print" — should use `job_create` then await confirmation before `job_start`.
