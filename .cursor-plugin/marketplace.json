@@ -22,7 +22,7 @@
     {
       "name": "print-hive",
       "source": "./plugins/print-hive",
-      "description": "Manage a Print Hive 3D-printer fleet from Cursor and Grok Bot. Check printer status, queue and dispatch jobs, diagnose failures, predict filament runway, and get a what-next playbook.",
+      "description": "Onboard and manage a Print Hive 3D-printer fleet from Cursor and Grok Bot. Authorize, install Hive Link, add printers, then check status, queue jobs, diagnose failures, and get a what-next playbook.",
       "version": "0.1.4"
     }
   ]

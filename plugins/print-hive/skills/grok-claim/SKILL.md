@@ -126,3 +126,5 @@ This returns a new `access_token` and a new `identity_assertion` for subsequent 
 ## Completion check
 
 Authentication is complete when the MCP connection succeeds and `printers_list` or another authenticated tool returns data from the user's organization.
+
+After authentication succeeds, continue farm onboard with the **setup** skill (Hive Link install/authorize, then add/connect printers). Setup must not start printers.

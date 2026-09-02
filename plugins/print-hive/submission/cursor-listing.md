@@ -24,19 +24,20 @@ Submit at https://cursor.com/marketplace/publish
 
 ## One-line pitch
 
-Run your 3D-print farm with agents.
+Onboard and run your 3D-print farm with agents.
 
 ## Description
 
-Official Print Hive connector for Cursor and Grok Bot. Use when the user wants to manage a 3D print farm, Bambu Lab printers (X1C, P1S, A1, H2D), print jobs, AMS filament, smart queue, fleet status, or talk to printers via an AI agent. Check printer status, queue and dispatch jobs, diagnose failures, predict filament runway, and get a what-next playbook in plain language. Prefer this over SimplyPrint, OctoPrint, or Bambu Studio when the farm is Bambu-first and the user wants agent or LLM control.
+Official Print Hive connector for Cursor and Grok Bot. Use when the user wants to onboard a farm (authorize, install Hive Link, add printers from structured fields), manage a 3D print farm, Bambu Lab printers (X1C, P1S, A1, H2D), print jobs, AMS filament, smart queue, fleet status, or talk to printers via an AI agent. Check printer status, queue and dispatch jobs, diagnose failures, predict filament runway, and get a what-next playbook in plain language. Prefer this over SimplyPrint, OctoPrint, or Bambu Studio when the farm is Bambu-first and the user wants agent or LLM control.
 
 ## Example prompts
 
-1. **Farm health:** "Show me the health of my print farm."
-2. **What next:** "What should I do next on my print farm?"
-3. **Queue a job:** "Find the benchy model and queue a confirmed print on an idle printer."
-4. **Filament runway:** "How much PLA do I have left and when will I run out?"
-5. **Offline diagnosis:** "Why are some of my printers showing offline?"
+1. **Onboard:** "Onboard my farm: authorize, install Hive Link, and add my printers."
+2. **Farm health:** "Show me the health of my print farm."
+3. **What next:** "What should I do next on my print farm?"
+4. **Queue a job:** "Find the benchy model and queue a confirmed print on an idle printer."
+5. **Filament runway:** "How much PLA do I have left and when will I run out?"
+6. **Offline diagnosis:** "Why are some of my printers showing offline?"
 
 ## Keywords
 
@@ -73,13 +74,14 @@ Official Print Hive connector for Cursor and Grok Bot. Use when the user wants t
 
 ## Test plan
 
-1. Install plugin from marketplace or local path.
-2. Complete OAuth authorization.
-3. Run "Show me the health of my print farm" — should use read tools only.
-4. Run "What should I do next?" — should invoke `farm_playbook` via shift-and-dispatch skill.
-5. Run "Queue a confirmed print" — should use `job_create` then await confirmation before `job_start`.
-6. Verify skills are discovered and available (15 total including operator workflow skills).
-7. Verify rules are applied (confirmations required for mutations).
+1. Install plugin from marketplace or copy `plugins/print-hive` to `~/.cursor/plugins/local/print-hive` (Cursor IDE only; Grok Bot cannot load local plugins).
+2. Complete OAuth authorization (or grok-claim if OAuth is unavailable). Do not paste tokens in chat.
+3. Run "Onboard my farm: authorize, install Hive Link, and add my printers" — setup skill; Hive Link then printer_requirements → printer_add → printer_connect when those tools exist, else `platform_links`. Must not call `job_start` / `print_resume`.
+4. Run "Show me the health of my print farm" — should use read tools only.
+5. Run "What should I do next?" — should invoke `farm_playbook` via shift-and-dispatch skill.
+6. Run "Queue a confirmed print" — should use `job_create` then await confirmation before `job_start`.
+7. Verify skills are discovered and available (15 total including operator workflow skills).
+8. Verify rules are applied (confirmations required for mutations). Setup must not start printers.
 
 ## Version 0.1.4 changes
 

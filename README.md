@@ -12,12 +12,14 @@ Install from the Cursor Marketplace (after publish):
 2. Search for "Print Hive"
 3. Click Install, then complete Print Hive OAuth authorization
 
-Until the marketplace listing is published, install locally:
+Until the marketplace listing is published, install locally for **Cursor IDE** (Grok Bot cannot load `~/.cursor/plugins/local`):
 
 ```sh
-# Clone to local plugins directory
-git clone https://github.com/PrintHive/print-hive-plugins ~/.cursor/plugins/local/print-hive-plugins
+git clone https://github.com/PrintHive/print-hive-plugins
+cp -R print-hive-plugins/plugins/print-hive ~/.cursor/plugins/local/print-hive
 ```
+
+Confirm `plugins/print-hive/mcp.json` is URL-only HTTP to `https://api.printhiv3d.com/v1/mcp` with no API key and no secret env vars.
 
 Or import the repository marketplace in team settings.
 
