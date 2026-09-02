@@ -10,11 +10,14 @@ Install from the Cursor Marketplace (after publish):
 2. Search for "Print Hive"
 3. Click Install, then complete Print Hive OAuth authorization
 
-Until the marketplace listing is published, install locally for testing:
+Until the marketplace listing is published, install locally for **Cursor IDE** testing (Grok Bot cannot load `~/.cursor/plugins/local`):
 
 ```sh
-git clone https://github.com/PrintHive/print-hive-plugins ~/.cursor/plugins/local/print-hive-plugins
+mkdir -p ~/.cursor/plugins/local
+cp -R plugins/print-hive ~/.cursor/plugins/local/print-hive
 ```
+
+Confirm `mcp.json` is URL-only HTTP to `https://api.printhiv3d.com/v1/mcp` with no API key and no secret env vars. Then complete OAuth (or grok-claim for headless agents).
 
 For headless Grok Bot agents without built-in OAuth, use the agent claim flow documented in `skills/grok-claim/SKILL.md`.
 
@@ -82,7 +85,7 @@ The plugin includes operator workflow skills for farm management:
 
 | Skill | Purpose |
 |-------|---------|
-| `setup` | Account creation and OAuth connection |
+| `setup` | Authorize, install Hive Link, add/connect printers (does not start prints) |
 | `fleet-operations` | Job dispatch, printer control, safety confirmations |
 | `library-inventory` | Models, materials, inventory, Makes |
 | `grok-claim` | Headless agent authentication |
