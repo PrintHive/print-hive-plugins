@@ -51,6 +51,12 @@ https://api.printhiv3d.com/v1/mcp
 
 Until the directory listing is approved, add it as a custom MCP connector using OAuth discovery.
 
+## Farm crew (agents)
+
+Second marketplace plugin: `print-hive-farm-crew` — Foreman, Trendy, Spool, Nest, Wrench, Counter.
+
+Install alongside `print-hive` for MCP + role agents. Farm-safe gate: queue/slice when asked; confirm buys, parts, start/stop, and g-code.
+
 ## Skills
 
 The plugin includes specialized operator workflow skills:

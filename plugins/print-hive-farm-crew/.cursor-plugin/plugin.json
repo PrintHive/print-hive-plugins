@@ -1,0 +1,52 @@
+{
+  "name": "print-hive-farm-crew",
+  "displayName": "Print Hive Farm Crew",
+  "version": "0.1.0",
+  "description": "Marketplace pack of Print Hive farm role agents: Foreman, Trendy, Spool, Nest, Wrench, and Counter. Use when an operator wants a print-farm crew on Cursor or Grok Bot \u2014 onboard MCP, scout models, manage filament, slice, maintain printers, and clear channel orders \u2014 with farm-safe confirmations for buys, parts, start/stop, and g-code.",
+  "author": {
+    "name": "Print Hive",
+    "url": "https://printhiv3d.com"
+  },
+  "homepage": "https://printhiv3d.com/mcp",
+  "repository": "https://github.com/PrintHive/print-hive-plugins",
+  "keywords": [
+    "3d-printing",
+    "print-farm",
+    "bambu",
+    "AMS",
+    "filament",
+    "slicer",
+    "maintenance",
+    "marketplace",
+    "grok-bot",
+    "cursor",
+    "agents"
+  ],
+  "agents": "./agents/",
+  "rules": "./rules/",
+  "mcpServers": "./mcp.json",
+  "interface": {
+    "displayName": "Print Hive Farm Crew",
+    "shortDescription": "Role agents for a Print Hive farm",
+    "longDescription": "Install Foreman, Trendy, Spool, Nest, Wrench, and Counter with the Print Hive MCP connector. Farm-safe gate: queue/slice when asked; confirm buys, parts, start/stop, and g-code.",
+    "developerName": "Print Hive",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://printhiv3d.com",
+    "privacyPolicyURL": "https://printhiv3d.com/privacy",
+    "termsOfServiceURL": "https://printhiv3d.com/terms",
+    "defaultPrompt": [
+      "Onboard my Print Hive farm and stand up the crew",
+      "What is trending that my farm can print this week?",
+      "What filament is low and what should I reorder?",
+      "Slice this model for my fleet",
+      "Help me clear today's paid orders into the queue"
+    ],
+    "logo": "./assets/printhive-logo-stacked@4x.png",
+    "logoDark": "./assets/printhive-logo-stacked@4x.png",
+    "brandColor": "#1DB800"
+  }
+}
