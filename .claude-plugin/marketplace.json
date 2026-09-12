@@ -10,6 +10,12 @@
       "source": "./plugins/print-hive",
       "description": "Manage a Print Hive 3D-printer fleet from Claude Code.",
       "version": "0.1.4"
+    },
+    {
+      "name": "print-hive-farm-crew",
+      "source": "./plugins/print-hive-farm-crew",
+      "description": "Print Hive farm role agents (Foreman, Trendy, Spool, Nest, Wrench, Counter).",
+      "version": "0.1.0"
     }
   ]
 }

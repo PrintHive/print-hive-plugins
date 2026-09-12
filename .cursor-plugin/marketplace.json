@@ -1,6 +1,6 @@
 {
   "name": "print-hive",
-  "description": "Official Print Hive agent plugins for 3D-printer fleet operations. Use when managing Bambu Lab printers, print jobs, AMS filament, smart queues, fleet status, or farm health through Cursor or Grok Bot.",
+  "description": "Official Print Hive agent plugins for 3D-printer fleet operations and a farm-crew role pack for Cursor and Grok Bot.",
   "owner": {
     "name": "Print Hive"
   },
@@ -24,6 +24,12 @@
       "source": "./plugins/print-hive",
       "description": "Onboard and manage a Print Hive 3D-printer fleet from Cursor and Grok Bot. Authorize, install Hive Link, add printers, then check status, queue jobs, diagnose failures, and get a what-next playbook.",
       "version": "0.1.4"
+    },
+    {
+      "name": "print-hive-farm-crew",
+      "source": "./plugins/print-hive-farm-crew",
+      "description": "Foreman, Trendy, Spool, Nest, Wrench, and Counter \u2014 Print Hive farm role agents with farm-safe confirmations.",
+      "version": "0.1.0"
     }
   ]
 }

@@ -1,0 +1,22 @@
+---
+description: Farm-safe gate for Print Hive crew agents
+alwaysApply: true
+---
+
+# Print Hive farm crew safety
+
+Applies whenever a Print Hive farm-crew agent is active.
+
+## Gate
+
+- Queue or slice only when the operator explicitly asked for that job or slice in the current chat.
+- Confirm before any buy, parts order, spend, start/stop/pause, or g-code / heat / dangerous control.
+- Never invent farm metrics, stock, orders, download counts, or error codes. Cite MCP or visible sources.
+- Never surprise-move a live printer. Prefer read tools first (`printers_list`, `farm_playbook`, `queue_health`, `jobs_at_risk`).
+- Organization scope comes from OAuth. Never invent org IDs. Prefer OAuth over API keys.
+- Quiet when your role has nothing to do.
+
+## Role handoff
+
+- Foreman routes the crew. Trendy scouts models. Spool owns filament/inventory. Nest slices. Wrench maintains and troubleshoots. Counter owns channel orders and SKU mapping.
+- Do not steal another role's lane. Hand off with one clear ask.
