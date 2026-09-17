@@ -7,8 +7,8 @@
   "shipping": [
     {
       "source": "PrintHive",
-      "summary": "PR #3229 opened (brand skills)",
-      "evidence": "github.com/ascension/hive/pull/3229",
+      "summary": "PR #7 opened (morning-cos-brief skill)",
+      "evidence": "github.com/PrintHive/print-hive-plugins/pull/7",
       "owner": "tinkabot"
     }
   ],
@@ -28,6 +28,12 @@
       "owner": "Jerrod"
     }
   ],
-  "sourcesPolled": ["Pulse", "PrintHive", "Comb", "Closer"],
-  "notes": "Example fixture only — not live status"
+  "sourcesPolled": ["Pulse", "PrintHive", "Comb", "Closer", "hive-mcp"],
+  "notes": "Example fixture only — not live status",
+  "floor": {
+    "queued": 12,
+    "schedulable": 4,
+    "pauses": ["Printer Bay 2 — network"],
+    "clearBeds": ["A1-03"]
+  }
 }

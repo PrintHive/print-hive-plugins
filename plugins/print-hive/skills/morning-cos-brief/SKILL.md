@@ -12,11 +12,15 @@ Chief-of-Staff morning brief for Print Hive operators. Merge crew signals into t
 - Live routine: **Mon–Sat 8:00 AM America/Denver** (`0 8 * * 1-6`). Sunday off.
 - This skill is the packaging contract. The schedule/prompt live on the Daily Brief bot routine; do not invent a second schedule here.
 
-## Sources to poll
+## Sources to poll (exact strings)
 
-Pulse, PrintHive, Comb, Vertex, Ryujin, Quill, Wisp, Mochi, Closer.
+Pulse, PrintHive, Comb, Vertex, Ryujin, Quill, Wisp, Mochi, Closer, hive-mcp.
 
-Include **Cap** only when Enchanted Hollow work is material that morning.
+Include **Cap** only when Hollow keycaps/listings/orders are material that day.
+
+If a source doesn’t answer, say so in `notes` or omit the item. Never invent.
+
+Optional `floor` block (not required): `{ queued?, schedulable?, pauses?, clearBeds? }` from hive-mcp farm queue/floor reads only. No SSR Daily Brief card fields.
 
 ## Output buckets
 

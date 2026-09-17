@@ -7,6 +7,17 @@
   "shipping": [],
   "blocked": [],
   "needsJerrod": [],
-  "sourcesPolled": ["Pulse", "PrintHive", "Comb", "Vertex", "Ryujin", "Quill", "Wisp", "Mochi", "Closer"],
+  "sourcesPolled": [
+    "Pulse",
+    "PrintHive",
+    "Comb",
+    "Vertex",
+    "Ryujin",
+    "Quill",
+    "Wisp",
+    "Mochi",
+    "Closer",
+    "hive-mcp"
+  ],
   "notes": "Nothing material changed"
 }
