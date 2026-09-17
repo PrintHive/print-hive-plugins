@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://printhiv3d.com/schemas/morning-cos-brief/v1.json",
+  "title": "MorningCoSBriefV1",
+  "description": "Provisional payload for the Mon–Sat morning CoS brief. Daily Brief owns the CoS prompt; confirm or replace fields before treating as canonical.",
+  "type": "object",
+  "required": ["version", "generatedAt", "timezone", "quiet", "materialChanged", "shipping", "blocked", "needsJerrod", "sourcesPolled"],
+  "properties": {
+    "version": { "const": "1" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "timezone": { "const": "America/Denver" },
+    "quiet": {
+      "type": "boolean",
+      "description": "true when nothing material to report; consumer should stay silent"
+    },
+    "materialChanged": {
+      "type": "boolean",
+      "description": "true when any bucket has items worth surfacing"
+    },
+    "shipping": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+    "blocked": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+    "needsJerrod": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+    "sourcesPolled": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Crew bots actually polled this run"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional one-liner; never invent farm metrics here"
+    }
+  },
+  "$defs": {
+    "item": {
+      "type": "object",
+      "required": ["source", "summary"],
+      "properties": {
+        "source": { "type": "string" },
+        "summary": { "type": "string" },
+        "evidence": { "type": "string" },
+        "owner": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

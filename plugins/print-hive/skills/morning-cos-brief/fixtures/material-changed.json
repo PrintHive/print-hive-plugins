@@ -1,0 +1,33 @@
+{
+  "version": "1",
+  "generatedAt": "2026-09-17T08:00:00-06:00",
+  "timezone": "America/Denver",
+  "quiet": false,
+  "materialChanged": true,
+  "shipping": [
+    {
+      "source": "PrintHive",
+      "summary": "PR #3229 opened (brand skills)",
+      "evidence": "github.com/ascension/hive/pull/3229",
+      "owner": "tinkabot"
+    }
+  ],
+  "blocked": [
+    {
+      "source": "Pulse",
+      "summary": "Waiting on farm-network check for Printer Bay 2",
+      "evidence": "Pulse status 2026-09-17",
+      "owner": "Pulse"
+    }
+  ],
+  "needsJerrod": [
+    {
+      "source": "Closer",
+      "summary": "Approve beta setup call for operator X",
+      "evidence": "Closer inbox draft",
+      "owner": "Jerrod"
+    }
+  ],
+  "sourcesPolled": ["Pulse", "PrintHive", "Comb", "Closer"],
+  "notes": "Example fixture only — not live status"
+}
