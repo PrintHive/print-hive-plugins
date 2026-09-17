@@ -33,3 +33,8 @@ Companion connector skills live in the `print-hive` plugin in this repo.
 ## Privacy
 
 [Privacy](https://printhiv3d.com/privacy) · [Terms](https://printhiv3d.com/terms) · [MCP docs](https://printhiv3d.com/mcp)
+
+## Staff / CoS
+
+Companion skill (ships with the `print-hive` plugin): **morning-cos-brief** — Mon–Sat morning Chief-of-Staff merge of shipping / blocked / needs-Jerrod. Quiet when nothing material changed. SSR Daily Brief card is a separate PrintHive follow-on (not claimed live).
+
