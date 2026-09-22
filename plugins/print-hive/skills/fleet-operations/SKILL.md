@@ -29,12 +29,33 @@ Printing is a two-step operation:
 
 Never merge queue creation and physical dispatch into an implicit action. If eligibility changes, stop and report the server refusal.
 
+### Outside-Hive printers
+
+If the target printer is absent from `printers_list` / `printers_query` (e.g. shop Prusa XL), treat it as **outside-Hive**: record the shop printer label in notes / registry, and **omit any invented Hive job ID**. Do not fabricate a job id for printers Hive does not know.
+
+### BOV before start recommend or `job_start`
+
+`queue_health` alone is not enough. Before recommending start or calling `job_start`:
+
+- Require `printers_query` (or equivalent) BOV: `bed_clear_verified` / `bedClear` true, OR an explicit human override in the current conversation.
+- Treat `ready_source: operator_override` with `bed_clear_verified: false` as **not** clear.
+
+### Cameras / frameFreshness
+
+Use `printer_status_card` for occupancy/vision. If name-keyed lookup fails, retry with printer UUID. Report `frameFreshness` separately from BOV. Never treat `host_rejected`, empty frame, or passive/stale as BOV-clear.
+
+### Ready re-read after physical / chat clear
+
+After a physical "cleared/ready" or chat attestation: re-read Hive lock/ready state. Verbal clear is **attestation-only**, not a frozen release target.
+
 ## Control policy
 
 - Read tools may be used without an extra confirmation.
 - Control tools require an explicit user request and exact target resolution. Honor any tool-level `confirm` field.
 - Dangerous tools—including raw G-code, direct temperature changes, and stopping a print—require an explicit, current user instruction naming the target. Do not broaden one printer to many.
 - Treat scope rejection as a security boundary, not an error to work around.
+- Before proposing release / duplicate / `printers_set_ready`: probe capabilities. Treat `insufficient_scope` when `control` is required and `grantedScopes: ["read"]` as a **hard stop** — fail to Hive UI / control mint. No consent-card theater.
+- When control is available, `printers_set_ready` needs `confirm: true` plus frozen `targets[{printer, expectedCompletedJobId, targetSnapshot…}]`.
 - Do not retry motion, heat, file deletion, or print-start actions after ambiguous transport failure until state is re-read.
 
 ## Fleet management
