@@ -24,6 +24,14 @@ Annotations may include:
 
 ## Creating or modifying annotations
 
+**API-key path is a hard stop.** `operator_annotation_preview` / `operator_annotation_apply` require a human operator session. On an API-key credential:
+
+- Read `operator_annotations` only.
+- Do **not** call preview or apply, do not loop retries, and do not open a consent card for tools that cannot succeed on this path.
+- Route annotation writes to a human-session path or the Hive UI.
+
+When a human operator session is available:
+
 1. Call `operator_annotation_preview` to preview the change.
 2. Show the preview to the user.
 3. Only after explicit user consent, call `operator_annotation_apply` with `approved: true`.
@@ -43,5 +51,5 @@ Never apply annotations without user confirmation.
 
 - "What did I acknowledge?" → `assistant_recommendation_receipts`.
 - "Are there any reservations?" → `operator_annotations`.
-- "Reserve P1S-01 for customer order" → Preview then apply with confirmation.
+- "Reserve P1S-01 for customer order" → Human session: preview then apply with confirmation. API-key: hard stop; Hive UI or human-session path.
 - "Shift handoff notes" → `operator_annotations` for current notes.

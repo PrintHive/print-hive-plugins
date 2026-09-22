@@ -27,6 +27,10 @@ For actual filament motion (machine-controlled load/unload):
 4. Acknowledge completion: `filament_acknowledge`.
 5. Assign slots: `filament_assign_slots`.
 
+## Shortage / order asks
+
+For catalog shortage, order, or substitute questions, hand off to **material-runway** and cross-check `printer_ams` / loaded state before treating Spool "0 kg LOW" as farm-wide (inventory lag can falsify shortage). Do not duplicate AMS ranking logic here.
+
 ## Safety rules
 
 - **One printer at a time**, operator-attended.
