@@ -1,0 +1,39 @@
+{
+  "version": "1",
+  "generatedAt": "2026-09-17T08:00:00-06:00",
+  "timezone": "America/Denver",
+  "quiet": false,
+  "materialChanged": true,
+  "shipping": [
+    {
+      "source": "print-hive",
+      "summary": "PR opened for morning-cos-brief skill",
+      "evidence": "github.com/PrintHive/print-hive-plugins/pull/7",
+      "owner": "plugins"
+    }
+  ],
+  "blocked": [
+    {
+      "source": "fleet",
+      "summary": "Waiting on farm-network check for Printer Bay 2",
+      "evidence": "fleet status 2026-09-17",
+      "owner": "fleet"
+    }
+  ],
+  "needsOperator": [
+    {
+      "source": "ops",
+      "summary": "Approve beta setup call for a new operator",
+      "evidence": "ops inbox draft",
+      "owner": "operator"
+    }
+  ],
+  "sourcesPolled": ["print-hive", "fleet", "ops", "hive-mcp"],
+  "notes": "Example fixture only. Not live status.",
+  "floor": {
+    "queued": 12,
+    "schedulable": 4,
+    "pauses": ["Printer Bay 2 — network"],
+    "clearBeds": ["A1-03"]
+  }
+}

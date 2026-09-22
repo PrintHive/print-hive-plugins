@@ -62,7 +62,7 @@ Install alongside `print-hive` for MCP + role agents. Farm-safe gate: queue/slic
 The plugin includes specialized operator workflow skills:
 
 - **Core:** setup, fleet-operations, library-inventory, grok-claim
-- **Operator workflows:** fleet-status, shift-and-dispatch, material-runway, production-commitments, smart-assign, risk-readiness, performance-reporting, reliability-diagnostics, operator-context, filament-operations, briefing-settings
+- **Operator workflows:** fleet-status, shift-and-dispatch, material-runway, production-commitments, smart-assign, risk-readiness, performance-reporting, reliability-diagnostics, operator-context, filament-operations, briefing-settings, morning-cos-brief
 
 See `plugins/print-hive/skills/` for detailed routing and tool usage.
 
