@@ -33,3 +33,8 @@ Companion connector skills live in the `print-hive` plugin in this repo.
 ## Privacy
 
 [Privacy](https://printhiv3d.com/privacy) · [Terms](https://printhiv3d.com/terms) · [MCP docs](https://printhiv3d.com/mcp)
+
+## Staff / CoS
+
+Companion skill (ships with the `print-hive` plugin): **morning-cos-brief** — Mon–Sat morning chief-of-staff merge of shipping / blocked / needsOperator. Quiet when nothing material changed.
+
