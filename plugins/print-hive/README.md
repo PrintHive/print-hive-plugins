@@ -88,6 +88,7 @@ The plugin includes operator workflow skills for farm management:
 | `setup` | Authorize, install Hive Link, add/connect printers (does not start prints) |
 | `fleet-operations` | Job dispatch, printer control, safety confirmations |
 | `library-inventory` | Models, materials, inventory, Makes |
+| `product-feedback` | Draft crew feedback to Print Hive product (missing/broken tool, workflow pain, skill gap) |
 | `grok-claim` | Headless agent authentication |
 | `fleet-status` | Read-only connectivity and hardware inventory |
 | `shift-and-dispatch` | Session recaps, what-next priorities, dispatch queues |
