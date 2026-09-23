@@ -1,6 +1,6 @@
 {
   "name": "print-hive",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "Manage 3D-printer fleets, jobs, models, filament, inventory, and Makes through Print Hive.",
   "author": {
     "name": "Print Hive",
@@ -25,7 +25,10 @@
     "longDescription": "Connect Codex and ChatGPT to Print Hive for organization-scoped fleet visibility, model and material management, inventory operations, Makes, print-job dispatch, and guarded printer control.",
     "developerName": "Print Hive",
     "category": "Productivity",
-    "capabilities": ["Interactive", "Write"],
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
     "websiteURL": "https://printhiv3d.com",
     "privacyPolicyURL": "https://printhiv3d.com/privacy",
     "termsOfServiceURL": "https://printhiv3d.com/terms",
