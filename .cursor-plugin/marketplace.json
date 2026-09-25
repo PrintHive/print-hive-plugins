@@ -23,7 +23,7 @@
       "name": "print-hive",
       "source": "./plugins/print-hive",
       "description": "Onboard and manage a Print Hive 3D-printer fleet from Cursor and Grok Bot. Authorize, install Hive Link, add printers, then check status, queue jobs, diagnose failures, and get a what-next playbook.",
-      "version": "0.1.4"
+      "version": "0.1.7"
     },
     {
       "name": "print-hive-farm-crew",

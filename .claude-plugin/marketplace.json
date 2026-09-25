@@ -9,7 +9,7 @@
       "name": "print-hive",
       "source": "./plugins/print-hive",
       "description": "Manage a Print Hive 3D-printer fleet from Claude Code.",
-      "version": "0.1.4"
+      "version": "0.1.7"
     },
     {
       "name": "print-hive-farm-crew",
