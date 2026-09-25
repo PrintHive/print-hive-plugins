@@ -14,7 +14,7 @@
     "url": "https://github.com/PrintHive/print-hive-plugins",
     "source": "github"
   },
-  "version": "0.1.4",
+  "version": "0.1.7",
   "remotes": [
     {
       "type": "streamable-http",
