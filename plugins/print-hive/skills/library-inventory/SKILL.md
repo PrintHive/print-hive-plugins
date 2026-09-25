@@ -60,13 +60,14 @@ Retail / shop names often differ from Make names. When matching a restock OUT/LO
 
 - Match with fuzzy / alias tolerance (retail nickname ↔ Make title / Task `skuAliases`), not exact string only.
 - Null `sku_id`, empty notes, and missing tags are **OK** — they do not mean "no Make." Do not clear a retail line from OUT or an interim registry just because those fields are empty.
-- On catalog miss at match time, re-call `makes_list` / `jobs_get` / `tasks_list` (filter `skuAlias` when useful) after queue or start. Makes are often created at start time (create-at-start lag); an earlier inventory pass can miss them.
-- Do not drop a retail line from OUT / the interim registry until retail → job → Make (and Task when used) is linked after that re-read.
+- On catalog miss at match time, re-call `makes_list` / `jobs_get` (and `tasks_list` filtered by `skuAlias`, when present) after queue or start. Makes are often created at start time (create-at-start lag); an earlier inventory pass can miss them.
+- Do not drop a retail line from OUT / the interim registry until retail → job → Make (and Task when used) is linked after that re-read. A retail line leaves the interim registry only when `tasks_list` with `skuAlias=<retail name>` returns a Task linked to the Make (or the Make/model carries the agreed tag).
 - **Prefer live Operator Tasks and tags when present in the Hive MCP catalog:**
-  - Read with `tasks_list` / `tasks_get`. Create with `task_create` (`confirm:true`; optional `skuAliases`, `makeId`, `printJobId`). Update / complete with `task_update` / `task_complete` (`confirm:true`). These are not `action_items_list` and not annotations.
-  - Tag models / model files with `model_tags_set` / `model_file_tags_set` (`confirm:true`, full-list replace — omit a tag to unassign). Discover existing tags via `model_tags_catalog`.
-- **Invent hard-stop only when a needed tool is absent from the live catalog.** Do not invent Task entities or tag-write tools. `operator_annotation_*` is not a tag-write path. `printer_file_task_status` is printer file upload/delete status only, not product Operator Tasks.
-- Keep an interim retail → job → Make → file registry as findability fallback until retail lines have Task / `skuAliases` / tag coverage (pattern only; do not hard-code agent paths). Never invent stock counts.
+  - Read with `tasks_list` / `tasks_get`. Create with `task_create` (optional `skuAliases`, `makeId`, `printJobId`). Update / complete with `task_update` / `task_complete`. Show the proposed Task (title, linked Make / job, aliases) and set `confirm:true` only after operator approval. These are not `action_items_list` and not annotations. `task_complete` (Done swimlane) is not a stock event — it never implies `inventory_adjust` and never sets or infers retail counts.
+  - Tag models / model files with `model_tags_set` / `model_file_tags_set` (full-list replace). First read the target's current tags from `models_list` / `model_files_list`, show the complete resulting list (added / removed), and set `confirm:true` only after operator approval. Use `model_tags_catalog` to reuse existing tag spellings.
+- **Gate each step on the live catalog.** If a needed Task or tag tool is absent, hard-stop that step: do not fabricate Task records or ids, simulate tag writes, or claim a retail → Make link exists. Use only the tools that are present (e.g. `tasks_list` without `task_create` = read-only), fall back to the interim registry, and tell the operator which tool is missing.
+- `operator_annotation_*` is not a Task or tag substitute. `printer_file_task_status` is printer file upload/delete status only, not Operator Tasks.
+- Keep an interim retail → job → Make → file registry as findability fallback until retail lines have Task / `skuAliases` / tag coverage (this skill does not prescribe where the registry lives). Never invent stock counts.
 
 ### Make filament names first
 
